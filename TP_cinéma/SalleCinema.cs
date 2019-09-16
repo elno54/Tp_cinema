@@ -120,8 +120,9 @@ namespace TP_cinéma
 
         public double chiffreAffaires()
         {
-            double chiffre = this.nbPlacesNormal + this.nbPlacesReduites;
-            return chiffre;
+            double chiffre1 = this.nbPlacesNormal * this.prixUnitaire;
+            double chiffre2 = this.nbPlacesReduites * this.prixUnitaire * (80 / 100);
+            return chiffre1 * chiffre2;
         }
 
 
