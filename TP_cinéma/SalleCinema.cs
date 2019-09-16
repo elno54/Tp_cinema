@@ -82,6 +82,37 @@ namespace TP_cinéma
             return nbPlacesdispo;
         }
 
+        public bool vendrePlaces(int nbre, bool tarifReduit)        {
+            
+            if (tarifReduit == true)
+            {
+                prixUnitaire = nbPlacesReduites;
+
+            }
+            else
+            {
+                prixUnitaire = nbPlacesNormal;
+
+            }
+
+            if (nbre > nbPlacesDisponibles())
+            {
+
+                return false;
+
+            }
+            else
+            {
+
+                nbPlacesSalle = nbPlacesSalle - nbre;
+                return true;
+
+            }
+
+
+
+        }
+
 
     }
 }
