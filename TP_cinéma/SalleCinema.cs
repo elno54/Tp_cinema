@@ -10,7 +10,7 @@ namespace TP_cinéma
     {
         private string titre;
         private int nbPlacesSalle;
-        private float prixUnitaire;
+        private double prixUnitaire;
         private int nbPlacesNormal;
         private int nbPlacesReduites;
 
@@ -44,12 +44,12 @@ namespace TP_cinéma
             this.nbPlacesSalle = nb;
         }
 
-        public float getPrix()
+        public double getPrix()
         {
             return this.prixUnitaire;
         }
 
-        public void setPrix(float p)
+        public void setPrix(double p)
         {
             this.prixUnitaire = p;
         }
@@ -110,12 +110,22 @@ namespace TP_cinéma
             }
         }
 
-            public int remiseAZero()
+        public int remiseAZero()
             {
                  return 0; 
             }
 
+        public double chiffreAffaires()
+        {
+            double chiffre = nbPlacesNormal + nbPlacesReduites;
+            return chiffre;
         }
+
+
+
+
+
+    }
 
 
     }
