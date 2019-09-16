@@ -122,7 +122,12 @@ namespace TP_cinéma
         }
 
 
+        public double tauxRemplissage()
+        {
+            double taux = (nbPlacesReduites + nbPlacesNormal) * 100 / nbPlacesSalle;
+            return taux;
 
+        }
 
 
     }
