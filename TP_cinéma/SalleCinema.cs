@@ -77,7 +77,7 @@ namespace TP_cinéma
         public int nbPlacesDisponibles()
         {
             int nbPlacesdispo;
-            nbPlacesdispo = nbPlacesSalle - (nbPlacesNormal + nbPlacesReduites);
+            nbPlacesdispo = this.nbPlacesSalle - (this.nbPlacesNormal + this.nbPlacesReduites);
 
             return nbPlacesdispo;
         }
@@ -86,12 +86,12 @@ namespace TP_cinéma
 
             if (tarifReduit == true)
             {
-                prixUnitaire = nbPlacesReduites;
+                this.prixUnitaire = this.nbPlacesReduites;
 
             }
             else
             {
-                prixUnitaire = nbPlacesNormal;
+                this.prixUnitaire = this.nbPlacesNormal;
 
             }
 
@@ -104,7 +104,7 @@ namespace TP_cinéma
             else
             {
 
-                nbPlacesSalle = nbPlacesSalle - nbre;
+                this.nbPlacesSalle = this.nbPlacesSalle - nbre;
                 return true;
 
             }
@@ -117,15 +117,22 @@ namespace TP_cinéma
 
         public double chiffreAffaires()
         {
-            double chiffre = nbPlacesNormal + nbPlacesReduites;
+            double chiffre = this.nbPlacesNormal + this.nbPlacesReduites;
             return chiffre;
         }
 
 
         public double tauxRemplissage()
         {
-            double taux = (nbPlacesReduites + nbPlacesNormal) * 100 / nbPlacesSalle;
+            double taux = (this.nbPlacesReduites + this.nbPlacesNormal) * 100 / this.nbPlacesSalle;
             return taux;
+
+        }
+
+        public string ToString()
+        {
+
+            return ("Film joué" + this.titre + ", Nombre de places: " + this.prixUnitaire + ", Prix de la place: " + this.prixUnitaire + nbPlacesReduites + " places vendues à tarif réduit" + nbPlacesNormal + " places vendues à tarif normal");
 
         }
 
