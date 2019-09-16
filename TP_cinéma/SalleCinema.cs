@@ -73,5 +73,15 @@ namespace TP_cinéma
         {
             this.nbPlacesReduites = nR;
         }
+
+        public int nbPlacesDisponibles()
+        {
+            int nbPlacesdispo;
+            nbPlacesdispo = nbPlacesSalle - (nbPlacesNormal + nbPlacesReduites);
+
+            return nbPlacesdispo;
+        }
+
+
     }
 }
