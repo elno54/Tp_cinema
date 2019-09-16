@@ -83,7 +83,7 @@ namespace TP_cinéma
         }
 
         public bool vendrePlaces(int nbre, bool tarifReduit)        {
-            
+
             if (tarifReduit == true)
             {
                 prixUnitaire = nbPlacesReduites;
@@ -108,11 +108,15 @@ namespace TP_cinéma
                 return true;
 
             }
+        }
 
-
+            public int remiseAZero()
+            {
+                 return 0; 
+            }
 
         }
 
 
     }
-}
+
