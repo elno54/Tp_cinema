@@ -82,16 +82,17 @@ namespace TP_cinéma
             return nbPlacesdispo;
         }
 
-        public bool vendrePlaces(int nbre, bool tarifReduit)        {
+        public bool vendrePlaces(int nbre, bool tarifReduit)
+        {
 
             if (tarifReduit == true)
             {
-                this.prixUnitaire = this.nbPlacesReduites;
+                this.prixUnitaire = this.prixUnitaire * (80/100);
 
             }
             else
             {
-                this.prixUnitaire = this.nbPlacesNormal;
+                this.prixUnitaire = this.prixUnitaire * 1;
 
             }
 
