@@ -14,6 +14,7 @@ namespace TP_cinéma
         [STAThread]
         static void Main()
         {
+            // Lancement de la Form
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

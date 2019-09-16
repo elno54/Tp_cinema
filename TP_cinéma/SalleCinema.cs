@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_cinéma
 {
-    class Salle
+    class SalleCinema
     {
         private string titre;
         private int nbPlacesSalle;
@@ -15,7 +15,7 @@ namespace TP_cinéma
         private int nbPlacesReduites;
 
 
-        public Salle(string leTitre, int nbPsalle, float lePunitaire, int nbPnormal, int nbPreduites)
+        public SalleCinema(string leTitre, int nbPsalle, float lePunitaire, int nbPnormal, int nbPreduites)
         {
             this.titre = leTitre;
             this.nbPlacesSalle = nbPsalle;
@@ -29,7 +29,7 @@ namespace TP_cinéma
             return this.titre;
         }
 
-        public void setTitre (string t)
+        public void setTitre(string t)
         {
             this.titre = t;
         }
@@ -73,6 +73,5 @@ namespace TP_cinéma
         {
             this.nbPlacesReduites = nR;
         }
-
     }
 }
