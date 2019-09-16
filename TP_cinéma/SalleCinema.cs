@@ -111,9 +111,11 @@ namespace TP_cinéma
             }
         }
 
-        public int remiseAZero()
+        public void remiseAZero()
             {
-                 return 0; 
+            this.nbPlacesNormal = 0;
+            this.nbPlacesReduites = 0;
+            this.nbPlacesSalle = 0;
             }
 
         public double chiffreAffaires()
