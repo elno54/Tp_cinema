@@ -129,10 +129,10 @@ namespace TP_cinéma
 
         }
 
-        public string ToString()
+        public override string ToString()
         {
 
-            return ("Film joué" + this.titre + ", Nombre de places: " + this.prixUnitaire + ", Prix de la place: " + this.prixUnitaire + nbPlacesReduites + " places vendues à tarif réduit" + nbPlacesNormal + " places vendues à tarif normal");
+            return ("Film joué" + this.titre + ", Nombre de places: " + this.prixUnitaire + ", Prix de la place: " + this.prixUnitaire + this.nbPlacesReduites + " places vendues à tarif réduit" + this.nbPlacesNormal + " places vendues à tarif normal");
 
         }
 
